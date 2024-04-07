@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BookStoreApp.API.Data;
 using BookStoreApp.API.Models.Author;
-using AutoMapper;
 using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using BookStoreApp.API.Static;
 
@@ -89,7 +88,7 @@ namespace BookStoreApp.API.Controllers
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
                 if (!await AuthorExists(id))
                 {
