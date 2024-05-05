@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/BookStoreApp.Blazor.Server.UI/Services/Base/test.nswag
